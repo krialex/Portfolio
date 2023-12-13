@@ -1,6 +1,6 @@
 # Portfolio
 
-![Screenshot of the home page of the site](/img/portfolioScreenshot.png "The home page")
+![Screenshot of the home page of the site](/img/portfolioScreenshot1.png "The home page")
 
 This is my portfolio!
 
