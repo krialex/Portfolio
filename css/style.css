@@ -1,10 +1,8 @@
 :root {
-    --background: #413F3E;
+    --background: #313131;
     --text: #FFF;
     --border: #140A02;
-
 }
-
 body {
     margin: 0px;
     min-height: 100vh;
@@ -12,51 +10,52 @@ body {
     color: var(--text);
     font-family: 'Montserrat', sans-serif;
 }
-main {
+.homeInfo {
     display: flex;
     flex-direction: row-reverse;
-    margin: 0px auto;
-    justify-content: center;
+    margin: 20px auto;
+}
+h1 {
+    font-size: 2em;
+    max-width: 300px;
+    font-family: 'Playfair Display', serif;
 }
 .bigIcons {
     font-size: 3em;
     display: flex;
     gap: 40px;
-    justify-content: center;
+    justify-content: end;
+    margin-right: 100px;
 }
-
-.homeInfo {
-    max-width: 316px;
-    padding: 30px;
-}
-.aboutMe {
-    padding: 10px 40px;
-}
-h1 {
-    font-size: 2.3em;
-    padding-top: 30px;
-    font-family: 'Playfair Display', serif;
-}
-.homeInfo p {
-    max-width: 80%;
+.aboutMe p {
+    max-width: 550px;
+    margin: 20px auto;
 }
 .homeCards {
     background-image: url(../img/homePage.png);
-    width: 100%;
-    height: 100%;
+    background-size: cover;
+    min-height: 100vh;
 }
 .InfoOne img {
     max-width: 160px;
     border: 2px solid var(--border);
+    box-shadow: 0 0 1em var(--border);
 }
 .cards {
     background-color: var(--background);
-    max-width: 50%;
     margin: 40px auto;
     display: flex;
+    flex-direction: column-reverse;
     gap: 20px;
     padding: 20px;
     align-items: center;
+    min-width: 200px;
+}
+.cardSection {
+    display: flex;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0px auto;
 }
 .language {
     display: flex;
@@ -90,40 +89,39 @@ a:hover {
     align-items: center;
 }
 
-@media (max-width: 950px) {
- .aboutMe {
-    padding: 10px 0px;
- }
- h1 {
-    font-size: 1.8em;
-    padding-top: 10px;
- }
- .cards {
-    flex-direction: column-reverse;
-    gap: 5px;
-    text-align: center;
- }
- .infoTwo p {
-    text-align: left;
- }
- .homeInfo {
-    max-width: 200px;
-  }
-}
-@media (max-width: 700px) {
-    main {
-        flex-direction: column;
-        align-items: center;
+
+@media (max-width: 900px) {
+    .aboutMe p {
+        max-width: 500px;
     }
+    .cardSection {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .cards {
+        flex-direction: row-reverse;
+        max-width: 400px;
+    }
+    .infoTwo {
+        align-self: baseline;
+    }
+}
+@media (max-width: 800px) {
     .homeInfo {
+        flex-direction: column;
+    }
+    .aboutMe {
+        padding: 0px 20px;
+        margin: 0px auto;
+    }
+}
+@media (max-width: 500px) {
+    .aboutMe p {
+        max-width: 320px;
+    }
+    .cards {
         max-width: 300px;
     }
-    h1 {
-        max-width: 250px;
-        margin: 20px auto;
-        font-size: 2em;
-    }
-
 }
 
 @-webkit-keyframes bounceIcon {
